@@ -1,19 +1,31 @@
-// Arrays, Functions, and Objects
-// Arrays - [] , 0 index based
+function calculateTotal(subTotal, tax) {
+  return subTotal + subTotal * tax;
+}
 
-const friend1 = 'Sandra';
-const friend2 = 'Liam';
-const friend3 = 'Connor';
-const friend4 = 'Keno';
+console.log(calculateTotal(1, 0.07)); // 1.07
 
-const friends = ['Sandra', 'Liam', 'Connor', 'Keno', 1, 55, undefined, null];
+let order1 = calculateTotal(1, 0.07).toFixed(2);
+let order2 = calculateTotal(2, 0.065).toFixed(2);
+let order3 = calculateTotal(3, 0.06).toFixed(2);
 
-// Access value
-console.log(friends[2]); // Connor
+console.log(order1, order2, order3); // 1.07 2.13 3.18
 
-let bestFriend = friends[0];
-console.log(bestFriend); // Sandra
+const car = {
+  make: 'Ford',
+  model: 'F100',
+  year: 1977,
+  colors: ['red', 'blue', 'green'],
+  hybrid: false,
+  drive: function () {
+    console.log('Vrooom!');
+  },
+  stop() {
+    console.log('Screech!');
+  },
+};
 
-//change value
-friends[4] = 'Logan';
-console.log(friends); // ['Sandra', 'Liam', 'Connor', 'Logan', 1, 55, undefined, null]
+console.log(car.make); // Ford
+console.log(car.colors[1]); // blue
+
+car.drive(); // Vrooom!
+car.stop(); // Screech!
